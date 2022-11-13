@@ -7,7 +7,7 @@ import Footer from './Footer';
 export default class Tiket extends Component {
     render() {
         return (
-            <div>
+            <div className='FormTiket'>
                 <Formulir/>
                 <Card className='tiket'>
                     <Card.Body>Berikut adalah tiket yang tersedia:</Card.Body>
