@@ -5,8 +5,9 @@ import Figure from 'react-bootstrap/Figure';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import { Nav } from 'react-bootstrap';
-import About from './Aboutus';
+import Aboutus from './Aboutus';
 import CS from './CS';
+import Home from './Home';
 
 import {
   BrowserRouter as Router,
@@ -19,6 +20,7 @@ import {
 function AutoLayoutExample() {
   return (
     <Router>
+      <div>
     <Container>
     <Row>
         <Col>
@@ -97,12 +99,12 @@ function AutoLayoutExample() {
         <Figure>
         <Figure.Caption>
             <h1>About Us!</h1>
-            <h7>PO. New Shantika didirikan pada bulan Maret 2003. Garasi utama New Shantika berada di Ngabul, Kabupaten Jepara, Provinsi Jawa Tengah. New Shantika melayani beberapa rute perjalanan seperti Jepara-Jakarta dengan armada yang menyediakan fasilitas lengkap demi menjaga kenyamanan penumpang saat melakukan perjalanan.</h7>
+            <h4>PO. New Shantika didirikan pada bulan Maret 2003.</h4>
             
         </Figure.Caption>
         
         </Figure>
-        <Nav.Link as={Link} to="/aboutus"><Button variant="primary" >Cari Tahu lebih lanjut !</Button></Nav.Link>
+        <Nav.Link as={Link} to="/About"><Button variant="primary" >Cari Tahu lebih lanjut !</Button></Nav.Link>
         </Col>
         <Col>
       <Figure>
@@ -123,7 +125,7 @@ function AutoLayoutExample() {
             src= 'https://i1.wp.com/intraoralscanners.com/wp-content/uploads/2018/06/faq_icon_pic.png' className='img-fluid shadow-4' ></Image>
           <Figure.Caption>
         <h4>FAQ</h4>
-        <Nav.Link as={Link} to="/CS"><Button variant="primary" >Lihat FAQ </Button></Nav.Link>
+        <Nav.Link as={Link} to="/Bantuan"><Button variant="primary" >Lihat FAQ </Button></Nav.Link>
         </Figure.Caption>
         </Figure>
         </Col>
@@ -132,19 +134,24 @@ function AutoLayoutExample() {
       <Row>
         
       </Row>
+      
     </Container>
-    
-    <div>
-      <Switch>
-        <Route path="/aboutus">
-          <About/>
-        </Route>
-        <Route path="/CS">
-          <CS/>
-        </Route>
-      </Switch>
     </div>
+    <div>
+                    <Switch>
+                        <Route path="/Bantuan">
+                            <CS />
+                        </Route> 
+                        <Route path="/About">
+                            <Aboutus />
+                        </Route> 
+                        <Route path="/">
+                            <Home />
+                        </Route>
+                    </Switch>
+                </div>
     </Router>
+    
   );
 }
 
