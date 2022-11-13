@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #abd1db;
+  background-color: #50bfdb;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -67,4 +67,15 @@ Form{
 
 table{
   margin: 1cm;
+}
+
+.text-center{
+  margin-left: 4cm;
+  margin-right: 4cm;
+}
+
+.tiket{
+  margin-left: 4cm;
+  margin-right: 4cm;
+  text-align: left;
 }
