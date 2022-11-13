@@ -1,15 +1,21 @@
 
 import React,{useState} from "react";
-import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 
 function Formulir() {
     const [setDate] = useState();
     return (  
         <>
-           <Form>
+         <Card className="text-center">
+      <Card.Body>
+        <Card.Title>Mau pergi kemana?</Card.Title>
+        <Card.Text>
+        <Form>
       <Row>
         <Col>
           <Form.Control placeholder="Kota Keberangkatan" />
@@ -22,7 +28,11 @@ function Formulir() {
         </Col>
       </Row>
     </Form>
-    <Button variant="primary" >Cari Tiket !</Button>
+        </Card.Text>
+        <Button variant="primary">Cari Tiket!</Button>
+      </Card.Body>
+    </Card>
+          
         </>
     );
 }
