@@ -14,6 +14,8 @@ import Tiket from './Tiket';
 import Jadwal from './Jadwal';
 import Login from './Login';
 import Register from './Register';
+import Aboutus from './Aboutus';
+import CS from './CS';
 
 const NavbarComp = () => {
     const [loginStatus, setLoginStatus] = useState("");
@@ -56,7 +58,7 @@ const NavbarComp = () => {
                                 <Nav.Link as={Link} to="/jadwal">Jadwal</Nav.Link>
                                 <Nav.Link as={Link} to="/About">About Us</Nav.Link>
                                 <Nav.Link as={Link} to="/Bantuan">Bantuan</Nav.Link>
-                                
+
                                 <Nav.Link as={Link} to="/Login">{loginStatus}</Nav.Link>
                             </Nav>
 
@@ -77,6 +79,12 @@ const NavbarComp = () => {
                         </Route>
                         <Route path="/Register">
                             <Register />
+                        </Route> 
+                        <Route path="/Bantuan">
+                            <CS />
+                        </Route> 
+                        <Route path="/About">
+                            <Aboutus />
                         </Route> 
                         <Route path="/">
                             <Home />
